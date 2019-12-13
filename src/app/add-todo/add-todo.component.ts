@@ -28,7 +28,6 @@ export class AddTodoComponent implements OnInit {
     if (this.todoForm.valid) {
       const value = this.todoForm.value;
       const newToDo = new ToDo(value); 
-      console.log(newToDo);
       this.dialogRef.close(newToDo);
     }
   }

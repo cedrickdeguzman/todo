@@ -24,9 +24,7 @@ export class AppComponent implements OnInit {
   }
 
   getData() {
-    console.log(this.toDos,'awuuu');
     this.toDos = this.toDoService.toDoData();
-    console.log(this.toDos);
   }
 
   openModal() {
