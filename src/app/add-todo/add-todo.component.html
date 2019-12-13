@@ -1,0 +1,19 @@
+<div class="container">
+    <mat-toolbar>Add Todo</mat-toolbar>
+    <form [formGroup]="todoForm">
+        <mat-form-field>
+            <input matInput formControlName="title" placeholder="Title">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput formControlName="image" placeholder="Image Url">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <textarea matInput formControlName="note" placeholder="Note"></textarea>
+        </mat-form-field>
+        <div>
+            <button (click)="submit()" class="submit" color="accent" mat-raised-button>Submit</button>
+        </div>
+    </form>
+</div>

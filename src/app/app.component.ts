@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from './todo.service';
 import { ToDo } from './model/todo.model';
+import { MatDialog } from '@angular/material/dialog';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +14,8 @@ export class AppComponent implements OnInit {
   toDos: ToDo[] = [];
 
   constructor(
-    private toDoService: TodoService
+    private toDoService: TodoService,
+    public matDialog: MatDialog
   ) {}
 
   ngOnInit() {
@@ -24,5 +27,15 @@ export class AppComponent implements OnInit {
     console.log(this.toDos,'awuuu');
     this.toDos = this.toDoService.toDoData();
     console.log(this.toDos);
+  }
+
+  openModal() {
+    this.matDialog.open(AddTodoComponent,{
+      width: '600px'
+    }).afterClosed().subscribe((result) => {
+      if (result) {
+        this.toDos.push(result);
+      }
+    });
   }
 }

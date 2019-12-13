@@ -1,0 +1,15 @@
+.container {
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    mat-toolbar {
+        background-color: transparent;
+    }
+
+    .submit {
+        float: right;
+    }
+}
