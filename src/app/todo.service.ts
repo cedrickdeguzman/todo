@@ -12,11 +12,13 @@ export class TodoService {
     const notes: ToDo[] = [
       {
         title: 'cook',
-        note: 'buttered shrimp'
+        note: 'buttered shrimp',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Shrimp_and_corn_chowder.jpg'
       },
       {
         title: 'inom',
-        note: 'everyday'
+        note: 'everyday',
+        image: 'https://i.ytimg.com/vi/V7NJArkdyw0/hqdefault.jpg'
       }
     ];
     return notes;
